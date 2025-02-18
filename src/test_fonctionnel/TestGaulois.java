@@ -11,15 +11,11 @@ public class TestGaulois {
 		
 		/* Création_Romain */
 		Romain Minus = new Romain("Minus", 6);
-		
-		/* Variables */
-		String ParoleAsterix = Asterix.prendreParole();
-		String ParoleObelix = Obelix.prendreParole();
-		
+				
 		/* Dialogue */
-		Asterix.parler(ParoleAsterix + "Bonjour Obelix");
-		Obelix.parler(ParoleObelix + "Bonjour Astérix. Ca te dirais d'aller chasser des sangliers ?");
-		Asterix.parler(ParoleAsterix + "Oui très bonne idée.");
+		Asterix.parler("Bonjour Obelix");
+		Obelix.parler("Bonjour Astérix. Ca te dirais d'aller chasser des sangliers ?");
+		Asterix.parler("Oui très bonne idée.");
 		System.out.println("Dans la forêt " + Asterix + " et " + Obelix + " tombe nez à nez sur le romain " + Minus + ".");
 		
 		/* Combat */
