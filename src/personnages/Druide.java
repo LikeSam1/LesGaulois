@@ -8,6 +8,11 @@ public class Druide {
 	private int force;
 	private Chaudron chaudron = new Chaudron(0, 0);
 	
+	public Druide(String nom, int force) {
+		this.nom = nom;
+		this.force = force;
+	}
+	
 	/* Functions */
 	private String prendreParole() {
 		return "Le Druide " + nom + " : ";
@@ -19,23 +24,23 @@ public class Druide {
 	
 	public void fabriquerPotion(int quantite, int forcePotion) {
 		this.chaudron.remplirChaudron(quantite, forcePotion);
-		parler("J'ai concocté" + quantite + "Dose de potion magique. Elle a une force de " + forcePotion + ".");
+		parler("J'ai concocté " + quantite + " Doses de potion magique. Elle a une force de " + forcePotion + ".");
 	}
 	
 	public void boosterGaulois(Gaulois gaulois) {
 		boolean reste = chaudron.resterPotion();
 		String nomGaulois = gaulois.getNom();
 		if(reste == true) {
-			if(nomGaulois == "Astérix") {
-				parler("Non " + nomGaulois + "Non ! et tu le sais très bien !");
+			if(nomGaulois == "Obélix") {
+				parler("Non " + nomGaulois + " Non ! et tu le sais très bien !");
 			} else {
 				int forcePotion = chaudron.prendreLouche();
 				gaulois.boirePotion(forcePotion);
-				parler("Tiens " + nomGaulois + "Un peu de potion magique.");
+				parler("Tiens " + nomGaulois + " Un peu de potion magique.");
 			}
 			
 		} else {
-			parler("Désolé " + nomGaulois + "il n'y a plus de potion.");
+			parler("Désolé " + nomGaulois + " il n'y a plus de potion.");
 		}
 	}
 	
