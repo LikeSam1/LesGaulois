@@ -1,10 +1,15 @@
 package personnages;
 
+import lieux.Village;
+
 public class Gaulois {
 	/* Attributs_Class */
 	private String nom;
 	private int force;
 	private int forcePotion = 1;
+	private Village village;
+	private int numeroVillagois;
+	private boolean chef = false;
 	
 	/* Main */
 	public static void main(String[] args) {		
@@ -48,6 +53,25 @@ public class Gaulois {
 
 	public void boirePotion(int forcePotion) {
 		this.forcePotion = forcePotion;
+	}
+	
+	public void ajouterVillage(Village village, int numero) {
+		this.village = village;
+		this.numeroVillagois = numero;
+	}
+	
+	public void ajouterChef() {
+		chef = true;
+	}
+	
+	public void sePresenter() {
+		if (chef == true) {
+			parler("Bonjour, je m'appelle " + nom + ". Je suis le chef le village Village des Irreductibles.");
+		} else if (village == null){
+			parler("Bonjour, je m'appelle " + nom + ". J'habite le village Village des Irreductibles.");
+		} else {
+			parler("Bonjour, je m'appelle " + nom + ". Je voyage de villages en villages.");
+		}
 	}
 	
 }
