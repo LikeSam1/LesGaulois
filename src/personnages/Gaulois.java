@@ -68,9 +68,9 @@ public class Gaulois {
 		if (chef == true) {
 			parler("Bonjour, je m'appelle " + nom + ". Je suis le chef le village Village des Irreductibles.");
 		} else if (village == null){
-			parler("Bonjour, je m'appelle " + nom + ". J'habite le village Village des Irreductibles.");
-		} else {
 			parler("Bonjour, je m'appelle " + nom + ". Je voyage de villages en villages.");
+		} else {
+			parler("Bonjour, je m'appelle " + nom + ". J'habite le " + village.getNom());
 		}
 	}
 	
