@@ -1,12 +1,19 @@
 package personnages;
 
+import objets.Equipement;
+
 public class Romain {
+	final int MAX_EQUIPEMENT = 2;
+	
 	private String nom;
 	private int force;
+	private Equipement[] equipement;
+	private int nbEquipement = 0;
 	
 	public Romain(String nom, int force) {
 		this.nom = nom;
 		this.force = force;
+		this.equipement = new Equipement[MAX_EQUIPEMENT];
 		assert isInvariantVerified() == true;
 	}
 	
@@ -44,5 +51,21 @@ public class Romain {
 	
 	public static void main(String[] args) {
 		Romain minus = new Romain("Minus", 6);
+		System.out.println(minus.equipement);
+	}
+	
+	public void sEquip(Equipement equipement) {
+		
+		switch(nbEquipement) {
+			case 2:
+				System.out.println("Le soldat " + nom + " est deja bien protéger");
+			case 1 :
+				if (this.equipement[nbEquipement-1] == equipement)
+					System.out.println("Le soldat " + nom + " possede déjà l'equipement");
+			case 0 :
+				this.equipement[nbEquipement] = equipement;
+				nbEquipement ++;
+				System.out.println("Le soldat " + nom + " s'équipe avec un " + equipement);
+		}
 	}
 }
