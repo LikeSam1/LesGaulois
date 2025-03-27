@@ -7,22 +7,22 @@ import personnages.Romain;
 public class TestGaulois {
 	public static void main(String[] args) {		
 		/* Création_Gaulois */
-		Gaulois Asterix =  new Gaulois("Astérix", 8);
-		Gaulois Obelix =  new Gaulois("Obélix", 8);
+		Gaulois asterix =  new Gaulois("Astérix", 8);
+		Gaulois obelix =  new Gaulois("Obélix", 8);
 		
 		/* Création_Druide */
-		Druide Panoramix =  new Druide("Panoramix", 2);
+		Druide panoramix =  new Druide("Panoramix", 2);
 		
 		/* Création_Romain */
-		Romain Brutus = new Romain("Brutus", 14);
+		Romain brutus = new Romain("Brutus", 14);
 				
 		
 		/* Combat */
-		Panoramix.fabriquerPotion(4, 3);
-		Panoramix.boosterGaulois(Obelix);
-		Panoramix.boosterGaulois(Asterix);
+		panoramix.fabriquerPotion(4, 3);
+		panoramix.boosterGaulois(obelix);
+		panoramix.boosterGaulois(asterix);
 		for(int i = 0; i < 3; i ++) {
-			Asterix.frapper(Brutus);
+			asterix.frapper(brutus);
 		}
 		
 	}

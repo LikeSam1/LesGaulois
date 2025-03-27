@@ -27,7 +27,7 @@ public class Village {
 	public void ajouterGaulois(Gaulois gaulois) {
 		villagois[nbVillagois] = gaulois;
 		nbVillagois ++;
-		gaulois.ajouterVillage(this, nbVillagois);
+		gaulois.ajouterVillage(this);
 	}
 	
 	public Gaulois trouverVillagois(int numero) {
