@@ -23,7 +23,7 @@ public class Romain {
 
 	public void recevoirCoup(int forceCoup) {
 		
-		force = force - forceCoup;
+		force -= forceCoup;
 		if (force < 1) {
 			this.parler("J'abandonne !");
 		} else {

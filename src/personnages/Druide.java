@@ -5,12 +5,11 @@ import objets.Chaudron;
 public class Druide {
 	private String nom;
 	private int force;
-	private Chaudron chaudron;
+	private Chaudron chaudron = new Chaudron();
 	
 	public Druide(String nom, int force) {
 		this.nom = nom;
 		this.force = force;
-		this.chaudron = new Chaudron();
 	}
 	
 	public void parler(String texte) {
@@ -23,7 +22,7 @@ public class Druide {
 	
 	public void fabriquerPotion(int quantite, int forcePotion) {
 		chaudron.remplirChaudron(quantite, forcePotion);
-		this.parler("J'ai concocté " + quantite + " doses de potion magique. Elle a une force de " + forcePotion + ".");
+		parler("J'ai concocté " + quantite + " doses de potion magique. Elle a une force de " + forcePotion + ".");
 	}
 	
 	public void booster(Gaulois gaulois) {
